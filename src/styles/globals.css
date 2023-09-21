@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-main-primary: #145389;
+  --navigation-button-dark-background: #0c0e0f;
+  --navigation-button-dark-hover-border: #294dfa;
+  --navigation-button-highlighted-hover-border: #0c0e0f;
+  --navigation-button-highlighted-background: #294dfa;
+  --button-content-color: #ffffff;
+  --button-homepage-content-background: #294dfa;
+  --homepage-active-slider-border-color: #294dfa;
+  --homepage-active-slider-text-color: #0b1519;
+  --homepage-slider-border-color: #0b1519;
+  --homepage-slider-text-color: #0b1519;
+}
+
+body {
+  margin: 0;
+}
+
+.indicators > .active div::before {
+  background-color: var(--homepage-active-slider-border-color);
+}
+
+.indicators > .active div {
+  opacity: 1;
+}

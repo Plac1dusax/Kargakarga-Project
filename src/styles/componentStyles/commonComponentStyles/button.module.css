@@ -1,5 +1,6 @@
 .button,
-.button_wide {
+.button_wide,
+.button_homepage_content {
   border: none;
   outline: none;
   background-color: var(--navigation-button-dark-background);
@@ -30,4 +31,13 @@
 
 .button_wide:hover {
   border: 2px solid var(--navigation-button-highlighted-hover-border);
+}
+
+.button_homepage_content {
+  width: 121px;
+  height: 59px;
+
+  border-radius: 1em;
+
+  background-color: var(--button-homepage-content-background);
 }

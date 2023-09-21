@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-main-primary: #145389;
+  --navigation-button-dark-background: #0c0e0f;
+  --navigation-button-dark-hover-border: #294dfa;
+  --navigation-button-highlighted-hover-border: #0c0e0f;
+  --navigation-button-highlighted-background: #294dfa;
+  --button-content-color: #ffffff;
+}
+
+body {
+  margin: 0;
+}

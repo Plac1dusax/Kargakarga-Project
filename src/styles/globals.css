@@ -29,6 +29,13 @@
   --header-description-color: #0b1519;
   --team-member-name: #0b1519;
   --team-member-title: #0b1519;
+  --customer-feedback-background: #f5f5f5;
+  --mike-toreno: #181a1e;
+  --start-the-project-background: #0b1519;
+  --start-the-project-header: #ffffff;
+  --start-the-project-button-background: #294dfa;
+  --start-the-project-button-text: #ffffff;
+  --mail-information-text-color: #ffffff;
 }
 
 body {

@@ -13,7 +13,10 @@ import Service from "@/components/homepageComponents/Service"
 import Shadow from "@/components/commonComponents/Shadow"
 import teamMembers from "../data/teamMembers.json"
 import TeamMember from "@/components/homepageComponents/TeamMember"
+import customerFeedbacks from "../data/customerFeedbacks.json"
 import styles from "../styles/pageStyles/page.module.css"
+import Image from "next/image"
+import CustomerFeedback from "@/components/homepageComponents/CustomerFeedback"
 
 export default function Home() {
   const [cookieRequest, setCookieRequest] = useState(true)
@@ -41,30 +44,34 @@ export default function Home() {
             <Content />
           </Slide>
         </div>
-        {cookieRequest ? (
-          <div className={styles.cookie_request}>
-            <div className={styles.cookie_request_text}>
-              privacy setting — This site uses third-party website traking
-              technologies to provide and continially improve our services. I
-              agree and may revoke or change my consent at any time with effect
-              for the future. See also our Privacy Policy and Cookies
-            </div>
-            <div className={styles.cookie_request_buttons}>
-              <Button
-                type={"cookie-deny"}
-                isWide={false}
-                content={"Deny"}
-                setCookieRequest={setCookieRequest}
-              />
-              <Button
-                type={"cookie-accept"}
-                isWide={false}
-                content={"Accept"}
-                setCookieRequest={setCookieRequest}
-              />
-            </div>
+        <div
+          className={
+            cookieRequest
+              ? `${styles.cookie_request} ${styles.cookie_request_active} `
+              : `${styles.cookie_request} ${styles.cookie_request_inactive} `
+          }
+        >
+          <div className={styles.cookie_request_text}>
+            privacy setting — This site uses third-party website traking
+            technologies to provide and continially improve our services. I
+            agree and may revoke or change my consent at any time with effect
+            for the future. See also our Privacy Policy and Cookies
           </div>
-        ) : null}
+          <div className={styles.cookie_request_buttons}>
+            <Button
+              type={"cookie-deny"}
+              isWide={false}
+              content={"Deny"}
+              setCookieRequest={setCookieRequest}
+            />
+            <Button
+              type={"cookie-accept"}
+              isWide={false}
+              content={"Accept"}
+              setCookieRequest={setCookieRequest}
+            />
+          </div>
+        </div>
       </section>
       <section className={`${styles.section} ${styles.section_services}`}>
         <SectionHeader header={"Our Services"} />
@@ -96,6 +103,48 @@ export default function Home() {
           {teamMembers.map((person) => {
             return <TeamMember key={person.id} {...person} />
           })}
+        </div>
+      </section>
+      <section className={`${styles.section} ${styles.section_feedback}`}>
+        <div className={styles.section_header_wrapper}>
+          <SectionHeader header={"Customer Feedback"} />
+          <div className={styles.header_shadow_feedbacks}>
+            <Shadow />
+          </div>
+        </div>
+        <div className={styles.customer_feedbacks_container}>
+          <Slide arrows={false} slidesToShow={2} autoplay={false}>
+            {customerFeedbacks.map((feedback) => {
+              return <CustomerFeedback key={feedback.id} {...feedback} />
+            })}
+          </Slide>
+        </div>
+        <div className={styles.start_the_project_container}>
+          <div className={styles.start_the_project_flex}>
+            <div className={styles.start_the_project_content}>
+              <h3 className={styles.start_the_project_header}>
+                Hey! You can send us a message to start working on the project
+              </h3>
+              <div className={styles.start_the_project_button_and_information}>
+                <Button
+                  type={"start-project"}
+                  isWide={false}
+                  content={"Start the project"}
+                />
+                <div className={styles.mail_information}>
+                  <div className={styles.mail_header}>Or write to us at:</div>
+                  <p className={styles.mail}>info@kargakarga.com</p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.start_the_project_image}>
+              <Image
+                src={"/images/startTheProject/phone.png"}
+                alt=""
+                layout="fill"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>

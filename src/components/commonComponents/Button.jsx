@@ -48,7 +48,12 @@ export default function Button(props) {
         </button>
       )
       break
-
+    case "start-project":
+      button = (
+        <button className={`${styles.button} ${styles.button_start_project}`}>
+          {content}
+        </button>
+      )
     default:
       break
   }

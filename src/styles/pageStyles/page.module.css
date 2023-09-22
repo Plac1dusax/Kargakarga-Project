@@ -67,7 +67,9 @@
   background-color: var(--homepage-slider-border-color);
 }
 
-.cookie_request {
+.cookie_request,
+.cookie_request_active,
+.cookie_request_inactive {
   width: 100%;
   height: 97px;
 
@@ -83,9 +85,15 @@
 
   padding: 0 55.8px;
 
-  animation: pop-up 0.5s ease-in-out 2s forwards;
-
   background-color: var(--cookie-request-background-color);
+}
+
+.cookie_request_active {
+  animation: cookies-active 0.3s ease-in-out 2s forwards;
+}
+
+.cookie_request_inactive {
+  animation: cookies-inactive 0.3s ease-in-out;
 }
 
 .cookie_request_text {
@@ -136,10 +144,18 @@
   position: relative;
 }
 
-.header_shadow {
+.header_shadow,
+.header_shadow_feedbacks {
   position: absolute;
   left: -10%;
   top: -100%;
+}
+
+.header_shadow_feedbacks {
+  left: -10%;
+  top: -20%;
+
+  padding-left: 40px;
 }
 
 .section_about {
@@ -168,8 +184,111 @@
   gap: 20px;
 }
 
-@keyframes pop-up {
+.section_feedback .section_header_wrapper,
+.section_feedback .start_the_project_container {
+  padding: 60px 48px;
+}
+
+.customer_feedbacks_container {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.start_the_project_container {
+  width: 100%;
+
+  position: relative;
+}
+
+.start_the_project_flex {
+  width: 100%;
+  height: 100%;
+  background-color: var(--start-the-project-background);
+
+  border-radius: 0.8em;
+
+  padding: 0 1.5em;
+  padding-top: 1em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.start_the_project_content {
+  min-height: 100%;
+  border-radius: 0.6em;
+
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-bottom: 1.5em;
+}
+
+.start_the_project_image {
+  width: 50%;
+  height: 350px;
+
+  position: relative;
+}
+
+.start_the_project_header {
+  font-size: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--start-the-project-header);
+  text-transform: uppercase;
+}
+
+.start_the_project_button_and_information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+}
+
+.mail_information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-weight: 400;
+
+  color: var(--mail-information-text-color);
+}
+
+.mail {
+  margin: 0;
+}
+
+@keyframes cookies-active {
+  from {
+    bottom: -100px;
+  }
+
   to {
     bottom: 0;
+  }
+}
+
+@keyframes cookies-inactive {
+  0% {
+    bottom: 0;
+  }
+
+  99% {
+    bottom: -100px;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: 0;
   }
 }

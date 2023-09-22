@@ -62,3 +62,12 @@
   color: var(--cookie-accept-button-text-color);
   background-color: var(--cookie-accept-button-background);
 }
+
+.button_start_project {
+  width: 220px;
+  height: 50px;
+
+  background-color: var(--start-the-project-button-background);
+  color: var(--start-the-project-button-text);
+  border-radius: 1em;
+}

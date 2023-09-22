@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "High voltage mayonnaise",
+    "date": "March 11, 2020 at 23:03",
+    "feedback": "A long time ago I came across this wonderful artist and have never been disappointed with his work. He accurately conveys on paper everything you want him to depict, makes edits to the work without any problems and offers his ideas, which are often quite successful. However, I definitely and strongly recommend working with this creative person!",
+    "image": "/images/customerImages/customer-image-1.png",
+    "customBorder": false
+  },
+  {
+    "id": 2,
+    "name": "Bohdan Dubina",
+    "date": "Apr 20, 2020 at 23:07",
+    "feedback": "He is a wonderful artist, a master of his craft, and he completed the work on time, in just a couple of days, and at the highest level. He implements all ideas exactly. Communicates with clients politely. The best!",
+    "image": "/images/customerImages/customer-image-2.png",
+    "customBorder": false
+  },
+  {
+    "id": 3,
+    "name": "Albert Schmel",
+    "date": "Apr 20, 2020 at 23:07",
+    "feedback": "It's not the first time I've ordered art and I can say one thing: this person's work is done with a conscience. Thank you very much for the work done and I will continue to order only from you",
+    "image": "/images/customerImages/customer-image-3.png",
+    "customBorder": false
+  },
+  {
+    "id": 4,
+    "name": "Mike Toreno",
+    "date": "Dec 13, 2020 at 16:55",
+    "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras risus lacus, fringilla eget fermentum ac, finibus tincidunt turpis. Sed egestas, erat non placerat molestie, metus mi vehicula neque, non vulputate est nisi ac elit. Pellentesque faucibus pellentesque nisl. Pellentesque ultricies, ligula a placerat consequat, ipsum sem interdum tellus, nec dictum lacus orci ut metus.",
+    "image": "/images/customerImages/customer-image-4.png",
+    "customBorder": true
+  }
+]

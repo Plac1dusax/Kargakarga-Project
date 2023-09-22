@@ -1,24 +1,38 @@
-@import url("react-slideshow-image/dist/styles.css");
-
 .homepage_wrapper {
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
+  overflow-y: hidden;
+}
+
+.section {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.home_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page_header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
-  padding: 1.5em 1em;
+  width: 100%;
+
+  font-size: 28px;
+
+  padding: 0.5em 100px;
 }
 
 .contents_container {
   width: 100%;
   height: 100%;
 
-  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .indicator {
@@ -51,4 +65,230 @@
   border-radius: 0.3em;
 
   background-color: var(--homepage-slider-border-color);
+}
+
+.cookie_request,
+.cookie_request_active,
+.cookie_request_inactive {
+  width: 100%;
+  height: 97px;
+
+  position: fixed;
+  left: 0;
+  bottom: -100px;
+
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 55.8px;
+
+  background-color: var(--cookie-request-background-color);
+}
+
+.cookie_request_active {
+  animation: cookies-active 0.3s ease-in-out 2s forwards;
+}
+
+.cookie_request_inactive {
+  animation: cookies-inactive 0.3s ease-in-out;
+}
+
+.cookie_request_text {
+  width: 70%;
+  color: var(--cookie-request-text-color);
+
+  font-size: 16px;
+}
+
+.cookie_request_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.section_services,
+.section_about {
+  padding: 60px 48px;
+}
+
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 340px);
+  grid-template-rows: auto;
+
+  gap: 20px;
+
+  padding-top: 60px;
+
+  position: relative;
+
+  justify-content: space-between;
+}
+
+.shadow_grid_container {
+  position: absolute;
+  right: -10%;
+  top: -5%;
+}
+
+.section_header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+.header_shadow,
+.header_shadow_feedbacks {
+  position: absolute;
+  left: -10%;
+  top: -100%;
+}
+
+.header_shadow_feedbacks {
+  left: -10%;
+  top: -20%;
+
+  padding-left: 40px;
+}
+
+.section_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.header_description {
+  max-width: 600px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 33.6px;
+
+  color: var(--header-description-color);
+
+  margin: 0;
+}
+
+.team_members {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.section_feedback .section_header_wrapper,
+.section_feedback .start_the_project_container {
+  padding: 60px 48px;
+}
+
+.customer_feedbacks_container {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.start_the_project_container {
+  width: 100%;
+
+  position: relative;
+}
+
+.start_the_project_flex {
+  width: 100%;
+  height: 100%;
+  background-color: var(--start-the-project-background);
+
+  border-radius: 0.8em;
+
+  padding: 0 1.5em;
+  padding-top: 1em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.start_the_project_content {
+  min-height: 100%;
+  border-radius: 0.6em;
+
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-bottom: 1.5em;
+}
+
+.start_the_project_image {
+  width: 50%;
+  height: 350px;
+
+  position: relative;
+}
+
+.start_the_project_header {
+  font-size: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--start-the-project-header);
+  text-transform: uppercase;
+}
+
+.start_the_project_button_and_information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+}
+
+.mail_information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-weight: 400;
+
+  color: var(--mail-information-text-color);
+}
+
+.mail {
+  margin: 0;
+}
+
+@keyframes cookies-active {
+  from {
+    bottom: -100px;
+  }
+
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes cookies-inactive {
+  0% {
+    bottom: 0;
+  }
+
+  99% {
+    bottom: -100px;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: 0;
+  }
 }

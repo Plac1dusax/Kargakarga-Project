@@ -1,0 +1,12 @@
+.shadow {
+  z-index: 1;
+
+  width: 307px;
+  height: 307px;
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #4148ff 0%,
+    rgba(65, 72, 255, 0) 100%
+  );
+}

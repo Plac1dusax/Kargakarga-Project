@@ -1,0 +1,38 @@
+.team_member_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.team_member_image {
+  width: 350px;
+  height: 280px;
+
+  position: relative;
+}
+
+.team_member_information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+
+  gap: 10px;
+}
+
+.team_member_name,
+.team_member_title {
+  margin-bottom: 0;
+}
+
+.team_member_name {
+  font-weight: 700;
+  font-size: 18px;
+
+  color: var(--team-member-name);
+}
+
+.team_member_title {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--team-member-title);
+}

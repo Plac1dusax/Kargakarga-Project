@@ -16,6 +16,26 @@
   --homepage-active-slider-text-color: #0b1519;
   --homepage-slider-border-color: #0b1519;
   --homepage-slider-text-color: #0b1519;
+  --cookie-request-background-color: #0b1519;
+  --cookie-request-text-color: #ffffff;
+  --cookie-deny-button-background: #4a4a4a;
+  --cookie-deny-button-text-color: #ffffff;
+  --cookie-accept-button-background: #ffffff;
+  --cookie-accept-button-text-color: #0b1519;
+  --section-header-color: #0b1519;
+  --service-background-color: #f5f5f5;
+  --service-header-color: #0b1519;
+  --service-description-color: #0b1519;
+  --header-description-color: #0b1519;
+  --team-member-name: #0b1519;
+  --team-member-title: #0b1519;
+  --customer-feedback-background: #f5f5f5;
+  --mike-toreno: #181a1e;
+  --start-the-project-background: #0b1519;
+  --start-the-project-header: #ffffff;
+  --start-the-project-button-background: #294dfa;
+  --start-the-project-button-text: #ffffff;
+  --mail-information-text-color: #ffffff;
 }
 
 body {

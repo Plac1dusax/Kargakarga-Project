@@ -1,6 +1,4 @@
-.button,
-.button_wide,
-.button_homepage_content {
+.button {
   border: none;
   outline: none;
   background-color: var(--navigation-button-dark-background);
@@ -40,4 +38,27 @@
   border-radius: 1em;
 
   background-color: var(--button-homepage-content-background);
+}
+
+.button_cookie_deny,
+.button_cookie_accept {
+  padding: 24px 32px;
+  border-radius: 1em;
+}
+
+.button_cookie_deny {
+  width: 108px;
+  height: 61px;
+
+  color: var(--cookie-deny-button-text-color);
+
+  background-color: var(--cookie-deny-button-background);
+}
+
+.button_cookie_accept {
+  width: 126px;
+  height: 61px;
+
+  color: var(--cookie-accept-button-text-color);
+  background-color: var(--cookie-accept-button-background);
 }

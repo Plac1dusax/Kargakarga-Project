@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/images/teamMembers/founder.png",
+    "name": "Mykhailo Kulyk",
+    "title": "Founder. Designer"
+  },
+  {
+    "id": 2,
+    "image": "/images/teamMembers/designer.png",
+    "name": "Nikita Borishchenko",
+    "title": "Chief Ux/Ui designer"
+  },
+  {
+    "id": 3,
+    "image": "/images/teamMembers/art-director-3d.png",
+    "name": "Valeria Lozitskaya",
+    "title": "Art director of the 3D department"
+  },
+  {
+    "id": 4,
+    "image": "/images/teamMembers/art-director-2d.png",
+    "name": "Khrystyna Pechen",
+    "title": "Art director of the 2D department"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "header": "Character Design",
+    "image": "/images/serviceImages/service-cats.png",
+    "description": "Development of the character 'Music teacher'"
+  },
+  {
+    "id": 2,
+    "header": "Environment Art",
+    "image": "/images/serviceImages/service-plane.png",
+    "description": "Concept art environment for the novel 'Capital'"
+  },
+  {
+    "id": 3,
+    "header": "2D-illustrations",
+    "image": "/images/serviceImages/service-cats.png",
+    "description": "Illustration for the comic 'Star Girl'"
+  },
+  {
+    "id": 4,
+    "header": "3D-modeling",
+    "image": "/images/serviceImages/service-woman.png",
+    "description": "3D character concept"
+  },
+  {
+    "id": 5,
+    "header": "Book design",
+    "image": "/images/serviceImages/service-plane.png",
+    "description": "Design of the book 'Red Sands of Durnwood'"
+  },
+  {
+    "id": 6,
+    "header": "Ux/Ui design",
+    "image": "/images/serviceImages/service-woman.png",
+    "description": "Website for art studio “Manco Art”"
+  },
+  {
+    "id": 7,
+    "header": "Branding",
+    "image": "/images/serviceImages/service-plane.png",
+    "description": "Corporate style 'VESPA'"
+  },
+  {
+    "id": 8,
+    "header": "NFT-collection",
+    "image": "/images/serviceImages/service-cats.png",
+    "description": "NFT collection 'Dream'"
+  }
+]

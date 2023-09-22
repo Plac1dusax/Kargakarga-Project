@@ -1,8 +1,14 @@
 import React from "react"
 import styles from "../../styles/componentStyles/commonComponentStyles/button.module.css"
 
-export default function Button({ type, isWide, content }) {
+export default function Button(props) {
+  const { type, isWide, content, setCookieRequest } = props
+
   let button
+
+  function handleDenyCookies() {
+    setCookieRequest(false)
+  }
 
   switch (type) {
     case "navigation":
@@ -24,6 +30,24 @@ export default function Button({ type, isWide, content }) {
           {content}
         </button>
       )
+      break
+    case "cookie-deny":
+      button = (
+        <button
+          onClick={handleDenyCookies}
+          className={`${styles.button} ${styles.button_cookie_deny}`}
+        >
+          {content}
+        </button>
+      )
+      break
+    case "cookie-accept":
+      button = (
+        <button className={`${styles.button} ${styles.button_cookie_accept}`}>
+          {content}
+        </button>
+      )
+      break
 
     default:
       break

@@ -1,0 +1,13 @@
+.section_header {
+  color: var(--section-header-color);
+
+  font-size: 36px;
+  font-weight: bold;
+
+  max-width: 864px;
+  max-height: 120px;
+
+  z-index: 10;
+
+  text-transform: uppercase;
+}

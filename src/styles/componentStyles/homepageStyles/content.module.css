@@ -39,6 +39,8 @@
 
   width: 450px;
   height: 262.5px;
+
+  pointer-events: none;
 }
 
 .image img {

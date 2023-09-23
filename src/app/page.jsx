@@ -14,12 +14,15 @@ import Shadow from "@/components/commonComponents/Shadow"
 import teamMembers from "../data/teamMembers.json"
 import TeamMember from "@/components/homepageComponents/TeamMember"
 import customerFeedbacks from "../data/customerFeedbacks.json"
-import styles from "../styles/pageStyles/page.module.css"
 import Image from "next/image"
 import CustomerFeedback from "@/components/homepageComponents/CustomerFeedback"
+import FAQ from "@/components/homepageComponents/FAQ"
+import fAQ from "../data/fAQ.json"
+import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
   const [cookieRequest, setCookieRequest] = useState(true)
+  const [clickedQuestion, setClickedQuestion] = useState()
 
   const indicators = () => {
     return (
@@ -145,6 +148,26 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+      <section className={`${styles.section} ${styles.section_faq}`}>
+        <div className={styles.section_header_wrapper}>
+          <SectionHeader header={"FAQ"} />
+          <div className={styles.header_shadow_faq}>
+            <Shadow />
+          </div>
+        </div>
+        <div className={styles.faq}>
+          {fAQ.map((question) => {
+            return (
+              <FAQ
+                key={question.id}
+                {...question}
+                clickedQuestion={clickedQuestion}
+                setClickedQuestion={setClickedQuestion}
+              />
+            )
+          })}
         </div>
       </section>
     </div>

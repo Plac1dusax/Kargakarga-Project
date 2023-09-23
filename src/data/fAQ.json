@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "What is outsourcing?",
+    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis feugiat vivamus at augue eget arcu dictum."
+  },
+  {
+    "id": 2,
+    "question": "What do I need to get started on my project?",
+    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 3,
+    "question": "How does the process of working on a project work?",
+    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet est placerat in egestas erat. Mauris pharetra et ultrices neque ornare."
+  },
+  {
+    "id": 4,
+    "question": "Why is it beneficial to outsource the art component?",
+    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at risus viverra adipiscing."
+  }
+]

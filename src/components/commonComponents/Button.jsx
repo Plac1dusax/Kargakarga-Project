@@ -54,8 +54,15 @@ export default function Button(props) {
           {content}
         </button>
       )
-    default:
-      break
+    case "personal-data-agreement":
+      button = (
+        <button
+          type="submit"
+          className={`${styles.button} ${styles.button_personal_data_agreement}`}
+        >
+          {content}
+        </button>
+      )
   }
 
   return button

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "isVertical": true,
+    "path": "/images/masonryImages/masonry-image-1.png"
+  },
+  {
+    "id": 2,
+    "isVertical": false,
+    "path": "/images/masonryImages/masonry-image-2.png"
+  },
+  {
+    "id": 3,
+    "isVertical": false,
+    "path": "/images/masonryImages/masonry-image-3.png"
+  },
+  {
+    "id": 4,
+    "isVertical": false,
+    "path": "/images/masonryImages/masonry-image-4.png"
+  },
+  {
+    "id": 5,
+    "isVertical": true,
+    "path": "/images/masonryImages/masonry-image-5.png"
+  },
+  {
+    "id": 6,
+    "isVertical": false,
+    "path": "/images/masonryImages/masonry-image-6.png"
+  },
+  {
+    "id": 7,
+    "isVertical": false,
+    "path": "/images/masonryImages/masonry-image-7.png"
+  }
+]

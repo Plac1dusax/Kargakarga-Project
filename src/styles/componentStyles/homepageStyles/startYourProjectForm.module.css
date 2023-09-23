@@ -1,0 +1,89 @@
+.form_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+}
+
+.form_input {
+  outline: none;
+  background: none;
+  border: none;
+
+  padding-bottom: 1em;
+
+  width: 90%;
+
+  color: var(--form-input-text-color);
+
+  font-weight: 700;
+
+  border-bottom: 1px solid var(--form-input-border-color);
+}
+
+.form_input::placeholder {
+  color: var(--form-input-placeholder-color);
+  opacity: 50%;
+  font-weight: 400;
+}
+
+.personal_data_agreement {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  gap: 20px;
+}
+
+.access_personal_data_checkbox {
+  position: absolute;
+  width: -9999px;
+
+  opacity: 0;
+}
+
+.access_personal_data_label {
+  position: relative;
+
+  color: var(--personal-data-agreement-text-color);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-left: 40px;
+
+  cursor: pointer;
+}
+
+.access_personal_data_label::before {
+  content: "";
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  left: -40px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 0.3em;
+
+  border: 3px solid var(--form-custom-checkbox-border);
+}
+
+.form_wrapper input[type="checkbox"]:checked + label::before {
+  content: "\2714";
+  background-color: var(--form-custom-checkbox-background);
+
+  color: var(--form-custom-checkbox-color);
+
+  transition: background-color 200ms;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -14,12 +14,20 @@ import Shadow from "@/components/commonComponents/Shadow"
 import teamMembers from "../data/teamMembers.json"
 import TeamMember from "@/components/homepageComponents/TeamMember"
 import customerFeedbacks from "../data/customerFeedbacks.json"
-import styles from "../styles/pageStyles/page.module.css"
 import Image from "next/image"
 import CustomerFeedback from "@/components/homepageComponents/CustomerFeedback"
+import FAQ from "@/components/homepageComponents/FAQ"
+import fAQ from "../data/fAQ.json"
+import Masonry from "@/components/homepageComponents/Masonry"
+import StartYourProjectForm from "@/components/homepageComponents/StartYourProjectForm"
+import { AiOutlineInstagram } from "react-icons/ai"
+import { BiLogoLinkedin } from "react-icons/bi"
+import { BsTwitter } from "react-icons/bs"
+import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
   const [cookieRequest, setCookieRequest] = useState(true)
+  const [clickedQuestion, setClickedQuestion] = useState()
 
   const indicators = () => {
     return (
@@ -37,7 +45,7 @@ export default function Home() {
           <Navigation />
         </header>
         <div className={styles.contents_container}>
-          <Slide indicators={indicators}>
+          <Slide arrows={false} indicators={indicators}>
             <Content />
             <Content />
             <Content />
@@ -147,6 +155,62 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className={`${styles.section} ${styles.section_faq}`}>
+        <div className={styles.section_header_wrapper}>
+          <SectionHeader header={"FAQ"} />
+          <div className={styles.header_shadow_faq}>
+            <Shadow />
+          </div>
+        </div>
+        <div className={styles.faq}>
+          {fAQ.map((question) => {
+            return (
+              <FAQ
+                key={question.id}
+                {...question}
+                clickedQuestion={clickedQuestion}
+                setClickedQuestion={setClickedQuestion}
+              />
+            )
+          })}
+        </div>
+      </section>
+      <section
+        className={`${styles.section} ${styles.section_start_your_project}`}
+      >
+        <div className={styles.start_your_project_content_wrapper}>
+          <div className={styles.form_container}>
+            <h3 className={styles.start_your_project_header}>
+              Let's start your project!
+            </h3>
+            <div>
+              <h4 className={styles.start_your_project_form_header}>
+                Leave your contact details and we will contact you
+              </h4>
+              <StartYourProjectForm />
+            </div>
+          </div>
+          <div className={styles.masonry_container}>
+            <Masonry />
+          </div>
+        </div>
+      </section>
+      <footer className={styles.footer}>
+        <div className={styles.social_media_links}>
+          <div className={`${styles.link} ${styles.instagram}`}>
+            <AiOutlineInstagram />
+          </div>
+          <div className={`${styles.link} ${styles.linkedin}`}>
+            <BiLogoLinkedin />
+          </div>
+          <div className={`${styles.link} ${styles.twitter}`}>
+            <BsTwitter />
+          </div>
+        </div>
+        <p className={styles.footer_text}>
+          Üretken insanların tanışıp, proje üretebildiği açık inovasyon merkezi.
+        </p>
+      </footer>
     </div>
   )
 }

@@ -36,6 +36,25 @@
   --start-the-project-button-background: #294dfa;
   --start-the-project-button-text: #ffffff;
   --mail-information-text-color: #ffffff;
+  --question-background: #f5f5f5;
+  --question-text-color: #0b1519;
+  --answer-text-color: #0b1519;
+  --start-your-project-section-background: #294dfa;
+  --start-your-project-header: #ffffff;
+  --start-your-project-form-header: #f6f8ff;
+  --form-input-placeholder-color: #ffffff;
+  --form-input-text-color: #ffffff;
+  --form-input-border-color: #ffffff;
+  --form-custom-checkbox-background: #ffffff;
+  --form-custom-checkbox-border: #ffffff;
+  --personal-data-agreement-text-color: #f6f8ff;
+  --form-custom-checkbox-color: #1e3250;
+  --personal-data-agreement-button-background: #ffffff;
+  --personal-data-agreement-button-text: #294dfa;
+  --footer-background: #1d284a;
+  --social-media-link-background: #fcf2ed;
+  --social-media-link-color: #1d284a;
+  --footer-text-color: #ffffff;
 }
 
 body {

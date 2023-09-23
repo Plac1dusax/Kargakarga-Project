@@ -71,3 +71,12 @@
   color: var(--start-the-project-button-text);
   border-radius: 1em;
 }
+
+.button_personal_data_agreement {
+  width: 242px;
+  height: 55px;
+
+  background-color: var(--personal-data-agreement-button-background);
+  color: var(--personal-data-agreement-button-text);
+  border-radius: 1em;
+}

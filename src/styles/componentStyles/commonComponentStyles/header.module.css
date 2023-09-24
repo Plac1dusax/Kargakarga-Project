@@ -1,3 +1,9 @@
 .header {
   color: var(--header-main-primary);
 }
+
+@media all and (max-width: 1080px) {
+  .header {
+    font-size: 24px;
+  }
+}

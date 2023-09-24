@@ -55,10 +55,12 @@
   --social-media-link-background: #fcf2ed;
   --social-media-link-color: #1d284a;
   --footer-text-color: #ffffff;
+  --error-message: #e52e00;
 }
 
 body {
   margin: 0;
+  font-family: var(--font-primary), sans-serif;
 }
 
 .indicators > .active div::before {

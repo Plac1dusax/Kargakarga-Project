@@ -4,9 +4,6 @@
   background-color: var(--navigation-button-dark-background);
   color: var(--button-content-color);
 
-  width: 86px;
-  height: 42px;
-
   font-weight: bold;
 
   white-space: nowrap;
@@ -14,10 +11,18 @@
   border-radius: 9999999999999px;
 
   cursor: pointer;
+
+  transition: background-color 200ms;
+}
+
+.button_nav {
+  width: 86px;
+  height: 42px;
 }
 
 .button:hover {
   border: 2px solid var(--navigation-button-dark-hover-border);
+  background-color: #4a4a4a;
 }
 
 .button_wide {
@@ -29,6 +34,7 @@
 
 .button_wide:hover {
   border: 2px solid var(--navigation-button-highlighted-hover-border);
+  background-color: #262ee7;
 }
 
 .button_homepage_content {
@@ -40,10 +46,18 @@
   background-color: var(--button-homepage-content-background);
 }
 
+.button_homepage_content:hover {
+  background-color: #2974ff;
+}
+
 .button_cookie_deny,
 .button_cookie_accept {
   padding: 24px 32px;
   border-radius: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button_cookie_deny {
@@ -55,12 +69,20 @@
   background-color: var(--cookie-deny-button-background);
 }
 
+.button_cookie_deny:hover {
+  background-color: #757575;
+}
+
 .button_cookie_accept {
   width: 126px;
   height: 61px;
 
   color: var(--cookie-accept-button-text-color);
   background-color: var(--cookie-accept-button-background);
+}
+
+.button_cookie_accept:hover {
+  background-color: #c8c0c0;
 }
 
 .button_start_project {
@@ -72,6 +94,10 @@
   border-radius: 1em;
 }
 
+.button_start_project:hover {
+  background-color: #2974ff;
+}
+
 .button_personal_data_agreement {
   width: 242px;
   height: 55px;
@@ -79,4 +105,55 @@
   background-color: var(--personal-data-agreement-button-background);
   color: var(--personal-data-agreement-button-text);
   border-radius: 1em;
+}
+
+.button_personal_data_agreement:hover {
+  background-color: #d1d6df;
+}
+
+@media all and (max-width: 1080px) {
+  .button_nav {
+    width: 60px;
+    height: 25.5px;
+
+    font-size: 10px;
+  }
+
+  .button_wide {
+    width: 90px;
+    height: 30.24px;
+  }
+
+  .button_cookie_accept {
+    width: 95px;
+    height: 45px;
+  }
+  .button_cookie_deny {
+    width: 80px;
+    height: 45px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .button_nav {
+    width: 40px;
+    height: 17px;
+
+    font-size: 6px;
+  }
+
+  .button_wide {
+    width: 60px;
+    height: 20.16px;
+  }
+
+  .button_cookie_accept {
+    width: 75px;
+    height: 35px;
+  }
+
+  .button_cookie_deny {
+    width: 50px;
+    height: 28px;
+  }
 }

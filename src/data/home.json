@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "header": "WE’LL EMBODY THE UNIVERSE THAT LIVES IN YOUR HEART",
+    "subheader": "3D, 2D, Branding and Web. Copy",
+    "image": "/images/homepageImages/coffe-cups.png",
+    "alt": "Coffee cups"
+  },
+  {
+    "id": 2,
+    "header": "eget aliquet nibh praesent tristique magna",
+    "subheader": "Nisi Scelerisque Eu Ultrices",
+    "image": "/images/homepageImages/tree.png",
+    "alt": "Tree"
+  },
+  {
+    "id": 3,
+    "header": "porttitor massa id neque aliquam",
+    "subheader": "Et Netus Et",
+    "image": "/images/homepageImages/employee.png",
+    "alt": "Employee"
+  },
+  {
+    "id": 4,
+    "header": "massa enim nec dui",
+    "subheader": "Senectus Et Netus Et Malesuada",
+    "image": "/images/homepageImages/kangaroo.png",
+    "alt": "Kangaroo"
+  }
+]

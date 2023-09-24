@@ -1,13 +1,20 @@
 import React from "react"
+import axios from "axios"
 import styles from "../../styles/componentStyles/commonComponentStyles/button.module.css"
 
 export default function Button(props) {
-  const { type, isWide, content, setCookieRequest } = props
+  const { type, isWide, content, setCookieRequest, checkInputs } = props
 
   let button
 
   function handleDenyCookies() {
     setCookieRequest(false)
+  }
+
+  function handleAcceptCookies() {
+    setCookieRequest(false)
+
+    axios.get("http://localhost:3000/api/cookies")
   }
 
   switch (type) {
@@ -43,7 +50,10 @@ export default function Button(props) {
       break
     case "cookie-accept":
       button = (
-        <button className={`${styles.button} ${styles.button_cookie_accept}`}>
+        <button
+          onClick={handleAcceptCookies}
+          className={`${styles.button} ${styles.button_cookie_accept}`}
+        >
           {content}
         </button>
       )
@@ -54,6 +64,7 @@ export default function Button(props) {
           {content}
         </button>
       )
+      break
     case "personal-data-agreement":
       button = (
         <button

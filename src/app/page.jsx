@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Header from "@/components/commonComponents/Header"
 import Navigation from "@/components/homepageComponents/Navigation"
 import Content from "@/components/homepageComponents/Content"
@@ -23,11 +23,24 @@ import StartYourProjectForm from "@/components/homepageComponents/StartYourProje
 import { AiOutlineInstagram } from "react-icons/ai"
 import { BiLogoLinkedin } from "react-icons/bi"
 import { BsTwitter } from "react-icons/bs"
+import home from "../data/home.json"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
   const [cookieRequest, setCookieRequest] = useState(true)
   const [clickedQuestion, setClickedQuestion] = useState()
+  const [pageWidth, setPageWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const pageWidth = () => {
+      setPageWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", pageWidth)
+
+    return () => {
+      window.removeEventListener("resize", pageWidth)
+    }
+  }, [])
 
   const indicators = () => {
     return (
@@ -46,10 +59,9 @@ export default function Home() {
         </header>
         <div className={styles.contents_container}>
           <Slide arrows={false} indicators={indicators}>
-            <Content />
-            <Content />
-            <Content />
-            <Content />
+            {home.map((content, index) => {
+              return <Content key={index} {...content} />
+            })}
           </Slide>
         </div>
         <div
@@ -93,7 +105,9 @@ export default function Home() {
         </div>
       </section>
       <section className={`${styles.section} ${styles.section_about}`}>
-        <div className={styles.section_header_wrapper}>
+        <div
+          className={`${styles.section_header_wrapper} ${styles.about_header}`}
+        >
           <SectionHeader
             header={"MANCO ART — Ukrainian Game Art Outsourcing Studio"}
           />
@@ -121,39 +135,47 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.customer_feedbacks_container}>
-          <Slide arrows={false} slidesToShow={2} autoplay={false}>
+          <Slide
+            arrows={false}
+            slidesToShow={pageWidth > 1080 ? 2 : 1}
+            autoplay={false}
+          >
             {customerFeedbacks.map((feedback) => {
               return <CustomerFeedback key={feedback.id} {...feedback} />
             })}
           </Slide>
         </div>
-        <div className={styles.start_the_project_container}>
-          <div className={styles.start_the_project_flex}>
-            <div className={styles.start_the_project_content}>
-              <h3 className={styles.start_the_project_header}>
-                Hey! You can send us a message to start working on the project
-              </h3>
-              <div className={styles.start_the_project_button_and_information}>
-                <Button
-                  type={"start-project"}
-                  isWide={false}
-                  content={"Start the project"}
-                />
-                <div className={styles.mail_information}>
-                  <div className={styles.mail_header}>Or write to us at:</div>
-                  <p className={styles.mail}>info@kargakarga.com</p>
+        {pageWidth > 500 ? (
+          <div className={styles.start_the_project_container}>
+            <div className={styles.start_the_project_flex}>
+              <div className={styles.start_the_project_content}>
+                <h3 className={styles.start_the_project_header}>
+                  Hey! You can send us a message to start working on the project
+                </h3>
+                <div
+                  className={styles.start_the_project_button_and_information}
+                >
+                  <Button
+                    type={"start-project"}
+                    isWide={false}
+                    content={"Start the project"}
+                  />
+                  <div className={styles.mail_information}>
+                    <div className={styles.mail_header}>Or write to us at:</div>
+                    <p className={styles.mail}>info@kargakarga.com</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.start_the_project_image}>
-              <Image
-                src={"/images/startTheProject/phone.png"}
-                alt=""
-                layout="fill"
-              />
+              <div className={styles.start_the_project_image}>
+                <Image
+                  src={"/images/startTheProject/phone.png"}
+                  alt=""
+                  layout="fill"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        ) : null}
       </section>
       <section className={`${styles.section} ${styles.section_faq}`}>
         <div className={styles.section_header_wrapper}>

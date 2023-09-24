@@ -68,3 +68,10 @@
   font-weight: 400;
   opacity: 80%;
 }
+
+@media all and (max-width: 500px) {
+  .customer_feedback_wrapper {
+    min-width: 300px;
+    height: 100%;
+  }
+}

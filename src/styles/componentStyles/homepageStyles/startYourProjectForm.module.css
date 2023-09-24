@@ -87,3 +87,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.error_list {
+  margin: 0;
+}
+
+.error {
+  color: var(--error-message);
+}
+
+@media all and (max-width: 700px) {
+  .form_wrapper {
+    align-items: center;
+  }
+}

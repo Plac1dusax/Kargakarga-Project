@@ -10,3 +10,10 @@
     rgba(65, 72, 255, 0) 100%
   );
 }
+
+@media all and (max-width: 640px) {
+  .shadow {
+    width: 140px;
+    height: 140px;
+  }
+}

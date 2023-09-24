@@ -4,3 +4,9 @@
 
   gap: 10px;
 }
+
+@media all and (max-width: 1080px) {
+  .navigation_container {
+    gap: 5px;
+  }
+}

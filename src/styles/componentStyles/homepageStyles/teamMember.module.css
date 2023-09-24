@@ -1,10 +1,12 @@
 .team_member_wrapper {
   display: flex;
   flex-direction: column;
+
+  width: 100%;
 }
 
 .team_member_image {
-  width: 350px;
+  width: 90%;
   height: 280px;
 
   position: relative;
